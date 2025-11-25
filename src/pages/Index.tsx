@@ -324,7 +324,7 @@ const Index = () => {
               <CardContent className="pt-6 text-center">
                 <Icon name="MapPin" size={48} className="mx-auto mb-4 text-red-600" />
                 <h3 className="text-xl font-bold mb-2">Адрес</h3>
-                <p className="text-gray-400">ул. Ярости, 13<br/>Москва, 123456</p>
+                <p className="text-gray-400">ул. 1 Мая, 344<br/>Краснодар</p>
               </CardContent>
             </Card>
             

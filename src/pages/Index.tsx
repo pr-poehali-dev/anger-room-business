@@ -59,10 +59,10 @@ const Index = () => {
   ];
 
   const gallery = [
-    { id: 1, desc: 'Разбитая посуда' },
-    { id: 2, desc: 'Уничтожение техники' },
-    { id: 3, desc: 'Мебель под ударом' },
-    { id: 4, desc: 'Тарелки в полёте' }
+    { id: 1, desc: 'Разбитая посуда', img: 'https://cdn.poehali.dev/projects/cc5893f9-c4ca-44db-a53f-3f5250a2582c/files/00ddd149-88a1-4828-9eac-800e51ef7e5d.jpg' },
+    { id: 2, desc: 'Уничтожение техники', img: 'https://cdn.poehali.dev/projects/cc5893f9-c4ca-44db-a53f-3f5250a2582c/files/d4751c2b-90dc-45c0-b1b4-958791d165bd.jpg' },
+    { id: 3, desc: 'Мебель под ударом', img: 'https://cdn.poehali.dev/projects/cc5893f9-c4ca-44db-a53f-3f5250a2582c/files/58ba7611-afdc-4039-98bb-d64ad65b7381.jpg' },
+    { id: 4, desc: 'Тарелки в полёте', img: 'https://cdn.poehali.dev/projects/cc5893f9-c4ca-44db-a53f-3f5250a2582c/files/c2e890bd-7683-4864-91ce-8f5c33ca92db.jpg' }
   ];
 
   const handleBooking = () => {
@@ -78,7 +78,12 @@ const Index = () => {
     <div className="min-h-screen bg-[#0A0A0A] text-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden crack-effect">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950/20 to-black" />
+        <img 
+          src="https://cdn.poehali.dev/projects/cc5893f9-c4ca-44db-a53f-3f5250a2582c/files/71794352-bdd1-4ec9-b966-be56354a46ae.jpg" 
+          alt="Rage Room"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-red-950/40 to-black/70" />
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-600/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl animate-pulse delay-1000" />
@@ -293,10 +298,12 @@ const Index = () => {
                 className="relative h-80 rounded-lg overflow-hidden group cursor-pointer animate-fade-in"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
+                <img 
+                  src={item.img} 
+                  alt={item.desc}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/30 to-orange-600/30 group-hover:from-red-600/50 group-hover:to-orange-600/50 transition-all duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icon name="Image" size={64} className="text-white/50" />
-                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
                   <h3 className="text-2xl font-bold">{item.desc}</h3>
                 </div>

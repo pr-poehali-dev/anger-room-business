@@ -345,6 +345,21 @@ const Index = () => {
             </Card>
           </div>
           
+          <div className="mb-12">
+            <Card className="bg-[#1A1A1A] border-red-900 overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=38.975313%2C45.035470&z=17&l=map&pt=38.975313,45.035470,pm2rdm"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  className="w-full"
+                  title="Карта Краснодар, ул. 1 Мая, 344"
+                />
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="flex gap-4 justify-center">
             <Button size="lg" className="bg-red-600 hover:bg-red-700">
               <Icon name="MessageCircle" className="mr-2" />
